@@ -1,0 +1,21 @@
+body{
+    background: url(http://server1.decornorth.com/images/wallpoper.com/images/00/31/40/18/wood-wall_00314018.jpg);
+    /*background-color: #dce7eb*/;
+    font: 16px/1.6 Georgia,serif;
+
+}
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed',  Arial, sans-serif;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 700;
+}
+.inBox {
+    box-shadow: 0 10px 0 0 #009688 inset;
+    background: #ffffff;
+    border-bottom: 4px solid #607D8B ;
+    padding: 20px 20px;
+}
+.block-qt {
+    background: #f5ece3;
+}
