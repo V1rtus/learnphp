@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Изучение PHP на высоком левеле</title>
+    <title>Изучение PHP на высоком уровне</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,900,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
