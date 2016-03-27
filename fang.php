@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Изучение PHP на высоком уровне</title>
+    <title>Поиск Фэнга</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,900,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -35,8 +35,8 @@ error_reporting(E_ALL);
            <!-- Collect the nav links, forms, and other content for toggling -->
            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                <ul class="nav navbar-nav">
-                   <li class="active"><a href="index.php">Главная <span class="sr-only">(current)</span></a></li>
-                   <li><a href="fang.php"">Поиск Фэнга</a></li>
+                   <li><a href="index.php">Главная</a></li>
+                   <li class="active"><a href="fang.php"> <span class="sr-only">(current)</span>Поиск фенга</a></li>
                    <li class="dropdown">
                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                        <ul class="dropdown-menu">
@@ -76,39 +76,50 @@ error_reporting(E_ALL);
     </div> <!-- row-->
 
 <div class="inBox">
-<h1>Объектно-ориентированный подход</h1>
-<p>
-    Начнем с твоих реалий. Ты живешь в России, ты не владеешь гигантской "государственной" корпорацией, которую в случае чего будет спасать наше дорогое правительство за счёт средств из бюджета. Власти не станут помогать тебе в твоём деле, если не будут видеть реальную перспективу твоих задумок уже на старте. Они не поделятся с тобой ресурсами, чтобы ты стал богаче, особенно когд Источник статьи: мужской журнал BroDude.ru а за окном кризис, а на борьбу с ним и так денег не хватает. Скорее, парни с верхов придумают для тебя новые "приятные" налоги, которые будут отнимать твои деньги и время. Об их помощи "молодым предпринимателям" можно забыть раз и навсегда. Не нужно рассчитывать на помощь "Большого брата". Привыкай к тому, что любой предприниматель, особенно начинающий, один против всего мира.
-</p>
-   
-<p>
-    <?php
-   require_once ("class.employments.php");
-    /*
-    $obj = new minmax();
-
-    echo $obj->min(43,18,5) ; //5
-    echo "<br>";
-    echo $obj->max(43,18,5); //61*/
+<h1>Вас похищали пришельцы?</h1>
+<p>Заполните данную форму, если вас похищали пришельцы.</p>
+<form class="form-fang" action="report.php" method="post">
 
 
+  <label for="firstName">Имя:</label>
+  <input type="text" name="firstName" id="firstName"></br>
 
-   /* echo "<pre>";
-    print_r($obj);
-    echo "</pre>";*/
+  <label for="secondName">Фамилия:</label>
+  <input type="text" name="secondName" id="secondName"></br>
 
-    $obj = new employments("V", "Andreevich", "Dotsenko", 28);
-   
+  <label for="email">Ваш электронный адрес:</label>
+  <input type="text" name="email" id="email"></br>
 
-    echo "Сотрудник — $obj недавно принят на работу";
+  <label for="whenithappend">Когда это произошло?</label>
+  <input type="text" name="whenithappend" id="whenithappend"></br>
+
+  <label for="howlong">Как долго вы отсутствовали?</label>
+  <input type="text" name="howlong" id="howlong"></br>
+
+  <label for="howmany">Сколько их было?</label>
+  <input type="text" name="howmany" id="howmany"></br>
+
+  <label for="alienDescription">Опишите их:</label>
+  <input type="text" name="alienDescription" id="alienDescription" size="32"></br>
+
+  <label for="whattheydid">Что они делали с вами?</label>
+  <input type="text" name="whattheydid" id="whattheydid" size="32"></br>
+
+  <label for="fangspotted">Видели ли мою собачку?</label>
+Да <input type="radio" name="fangspotted" id="fangspotted" value="1"> Нет <input type="radio" name="fangspotted" id="fangspotted" value="0">
+</br>
+
+<img src="img/fang.png" alt="Фэнг" width="200" height="175" /></br>
+
+<label for="other">Дополнительная информация:</label>
+<textarea name="other" id="other"></textarea></br>
+
+<input type="submit" name="send" id="submit" value="Сообщить о похощении">
 
 
-    echo "<pre>";
-    print_r($obj);
-    echo "</pre>";
 
-    ?>
-</p>
+</form>
+
 
 </div><!-- books -->
 
