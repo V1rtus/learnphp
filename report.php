@@ -9,6 +9,7 @@ require_once ("function.php");
 //Если нажата кнопка, передаем параметры
 if($_POST){
 getData($_POST);
+connectDb();
 }else {
   echo "Данные не переданны";
 }
