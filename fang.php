@@ -1,4 +1,4 @@
-е<?php
+<?php
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 ?>
@@ -79,7 +79,22 @@ error_reporting(E_ALL);
 <h1>Вас похищали пришельцы?</h1>
 <p>Заполните данную форму, если вас похищали пришельцы.</p>
 <p>Пожалуйста, заполняйте форму с настоящими данными.</p>
-<form class="form-fang" action="report.php" method="post">
+<?php
+
+//Включаем вывод ошибок
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
+//Подключаем функции
+require_once ("function.php");
+
+//Если нажата кнопка, передаем параметры
+if(isset($_POST) && (!empty($_POST))){
+getData($_POST);
+connectDb();
+}else {
+  ?>
+  <form class="form-fang" action="fang.php" method="post">
 
 <div class="form-group">
   <label for="firstName">Имя:</label>
@@ -118,6 +133,7 @@ error_reporting(E_ALL);
   <label for="fangspotted">Видели ли мою собачку?</label>
 Да <input type="radio" name="fangspotted" id="fangspotted" value="1"> Нет <input type="radio" name="fangspotted" id="fangspotted" value="0">
 </br>
+</div>
 
 
 <img src="img/fang.png" alt="Фэнг" width="200" height="175" /><br>
@@ -130,7 +146,9 @@ error_reporting(E_ALL);
 
 
 </form>
-
+<?php
+}
+?>
 
 </div><!-- books -->
 
